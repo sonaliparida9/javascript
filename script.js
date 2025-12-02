@@ -46,4 +46,6 @@ console.log(100/0);
 let b = 10;
 console.log(b);
 
-// 12.
+// 12. Create a constant to store the value of PI and log it.
+const pi = Math.PI;
+console.log(pi);
