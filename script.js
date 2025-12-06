@@ -89,3 +89,73 @@ const arr = [1,2,3,4];
 // arr= []; //not reassignable
 arr.pop(); //updatable
 console.log(arr);
+
+
+// Loops
+//22. Write a for loop to print numbers from 1 to 50
+for(let i=1; i<=50; i++){
+    console.log(i);
+}
+
+// 23. Use a while loop to sum the numbers from 1 to 100
+let d=1;
+let sum=0;
+while(d<=100){
+    sum = sum + d;
+    d++;
+}
+console.log(sum);
+
+// 24. Create a for...of loop to log each character of the string "javascript".
+var str = "JavaScript"
+for(let character of str){
+    console.log(character);
+}
+
+// 25. Write a for loop that skips even numbers between 1 and 20.
+for(let i=1; i<=20; i++){
+    if(i%2 !== 0){
+        console.log(i);
+    }
+}
+
+// 26.Use a do...while loop to log numbers from 5 to 1.
+var a = 5;
+do{
+    console.log(a);
+    a--;
+}
+while(a>0)
+
+// 27. Create a for loop that calculates the factorial of 5.
+var fact = 1;
+for(var i=5; i>0; i--){  
+    fact = fact*i;
+}
+console.log(fact);
+
+//28. Write a nested loop to print a 3*3 grid of numbers.
+var hold = 1;
+for(var i=1; i<4; i++){
+    var str = "";
+    for(var j=1; j<4; j++){
+        str += `${hold} `;
+        hold++
+
+    }
+    console.log(str);
+} 
+
+//29. Use a for loop to reverse an array [1,2,3,4].
+var array = [1,2,3,4,5]
+for(var i = 0; i < Math.floor(array.length/2); i++){
+    var temp = array[i];
+    array[i] = array[array.length - 1];
+    array[array.length-1] = temp;
+}
+console.log(array);
+
+// 
+
+
+
