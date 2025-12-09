@@ -155,7 +155,42 @@ for(var i = 0; i < Math.floor(array.length/2); i++){
 }
 console.log(array);
 
-// 
+//30. Use a for...in loop to iterate over an object and log its keys.
+   var obj = {name:"sonali", age:22};
+   for (let key in obj){
+    console.log(key);
+   }
+//31. Write a while loop that logs numbers from 1 to 100 divisible by 5.
+    var num = 1;
+    while(num<101){
+        if(num % 5 === 0){
+            console.log(num);
+        }
+        num++;
+    }
 
 
+//  ARRAYS
+// 32. Create an array of your top 5 favorite movies and log it.
+ var arr1 = ["apple", "orange", "grapes", "banana", "mango"] ;
+ arr1.forEach(function(value){
+    console.log(value);
+ })
 
+// 33. Find and log the second element of an array.
+var arr1 = [1,2,3,4,5];
+console.log(arr[1])
+
+// 34.Add two new elements to the start of an array using .unshift().
+var arr1 =[1,2,3,4,5];
+arr1.unshift(0,-1);
+console.log(arr1);
+
+// 35. Remove the last elements of an array and log the updated array.
+var arr1 = [1,2,3,4,5];
+arr1.pop();
+console.log(arr1);
+
+// 35. Use .slice() to extract the first three elements of an array.
+ var arr1 = [1,2,3,4,5];
+ console.log(arr1.slice(0,3));
