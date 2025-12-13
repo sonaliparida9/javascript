@@ -113,6 +113,14 @@ for (let character of str) {
   console.log(character);
 }
 
+// Print only even numbers from 1 to 20
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(`even:${i}`);
+  }
+  console.log(`odd:${i}`);
+}
+
 // 25. Write a for loop that skips even numbers between 1 and 20.
 for (let i = 1; i <= 20; i++) {
   if (i % 2 !== 0) {
@@ -286,34 +294,82 @@ function getFact(num) {
 console.log(getFact(5));
 
 // 48. Write a function taht accepts a string and returns its reverse.
-function revofstr(str){
-    return str.split("").reverse().join("");
+function revofstr(str) {
+  return str.split("").reverse().join("");
 }
 console.log(revofstr("sonali"));
 
 // 49. Create a function to find the largest number in an array.
-function abcd(arr){
-    var max = 0;
-    for(var i=1; i<arr.length; i++){
-        if(arr[i]>arr[max]){
-            max = i;
-        }
+function abcd(arr) {
+  var max = 0;
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i] > arr[max]) {
+      max = i;
     }
-    return arr[max];
+  }
+  return arr[max];
 }
-console.log(abcd([1,2,3,34,55,5,7,45,90]));
+console.log(abcd([1, 2, 3, 34, 55, 5, 7, 45, 90]));
 
 // 50. Write a function that convert string to kebab-case.
-function kebab(str){
-    // return str.split(" ").join('-');
-    return str.replaceAll(' ','-')
+function kebab(str) {
+  // return str.split(" ").join('-');
+  return str.replaceAll(" ", "-");
 }
 console.log(kebab("hey kaise ho"));
 
 // 51. create a function thats log "hello world!" every time it is calls
-function abcd(){
-    console.log("Hello World!");
+function abcd() {
+  console.log("Hello World!");
 }
-abcd()
-abcd()
-abcd()
+abcd();
+abcd();
+abcd();
+
+// 52. Write a function that takes two numbers and returns their greatest common divisor(GCD).
+function gcd(a, b) {
+  while (b) {
+    var temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+console.log(gcd(12, 15));
+
+// 53. Create a function to check if a string is a palindrome.
+function isPalindrome(str) {
+  var rev = str.split("").reverse().join("");
+  return str === rev;
+}
+console.log(isPalindrome("madam"));
+
+// 54. Write a function that generates a random number between two given numbers.
+function randomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(randomInRange(5, 15));
+
+
+
+// Count how many numbers between 1 and 15 are greater then 8 Loop and count conditionally.
+ let count = 0;
+for(let i = 1; i<15; i++){
+  if(i>8){
+    count++
+  }
+}
+console.log(count);
+
+
+// Ask user for a number and say if it's positive or negative. use propmt()and a console
+var num = prompt("enter number");
+// jab bhi promt se kuchh bhi magoge to sacho kya wo number hai aur agar hai to convert karna padega
+// parseInt 
+// Number
+// + prompt ke aage + lagana
+num = parseInt(num);
+if(num>=0){
+  console.log("positive"); 
+}
+console.log("negative");
