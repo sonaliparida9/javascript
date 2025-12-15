@@ -352,7 +352,7 @@ console.log(randomInRange(5, 15));
 
 
 
-// Count how many numbers between 1 and 15 are greater then 8 Loop and count conditionally.
+//Q. Count how many numbers between 1 and 15 are greater then 8 Loop and count conditionally.
  let count = 0;
 for(let i = 1; i<15; i++){
   if(i>8){
@@ -362,8 +362,8 @@ for(let i = 1; i<15; i++){
 console.log(count);
 
 
-// Ask user for a number and say if it's positive or negative. use propmt()and a console
-var num = prompt("enter number");
+//Q. Ask user for a number and say if it's positive or negative. use propmt()and a console
+// var num = prompt("enter number");
 // jab bhi promt se kuchh bhi magoge to sacho kya wo number hai aur agar hai to convert karna padega
 // parseInt 
 // Number
@@ -373,3 +373,119 @@ if(num>=0){
   console.log("positive"); 
 }
 console.log("negative");
+
+// Q. Ask  user for password and print access status Hardcoded correct password. Compare with user input.
+let password = "Sonali";
+
+let pass= prompt("enter password");
+
+if(pass===null){
+  console.log("You cancelled it");
+}else{
+  if(pass.trim()===password){
+    console.log("matched");
+  }else{
+    console.log("not matched");
+  }
+}
+
+// Level-2
+// Q. Allow only 3 attempts to enter correct password. if user gets it right early,stop. if not "Acoount Locked".
+// While-tab tak chalo jab tak condition true hai
+let attempts = 0;
+let flag = false;
+let correctPassword = "sonali123";
+
+let password1 =prompt("Enter password");
+attempts++;
+
+if(password1 === correctPassword) flag=true;
+
+while(password1 != correctPassword){
+  if(attempts === 3){
+    console.error("Acoount Locked");
+    break;
+  }
+  password1 =prompt("enter password");
+  if(password1 === correctPassword) flag=true;
+  attempts++;
+}
+if(flag===true) console.log("account opened");
+
+// OR
+let attempt= 0;
+let sahipassword = "sonali";
+
+let userpasword = prompt("enter password");
+attempt++;
+
+while(attempt<3 && sahipassword !== userpasword){
+  userpasword = prompt("enter password");
+  attempt++;
+}
+
+if(attempt === 3 && sahipassword !== userpasword){
+  console.error("Account Locked");
+}else{
+  console.log("Done");
+}
+
+
+//Q. Ask user for words until they type "stop". Count how many times they typed "yes". Loop until "stop" is typed.Count "yes"
+let word = prompt("Enter words");
+let counter = 0;
+
+while(word !== "stop"){
+  if(word === "yes"){
+    counter++;
+  }
+   word = prompt("enter word");
+}
+  console.log(`total times yes count : ${counter}`)
+
+//Q. Print numbers divisible by 7 form 1 to 50 use modulo % and loop
+for(let i=1; i<51; i++){
+  if(i%7===0){
+    console.log(`numbers: ${i}`)
+  }
+}
+
+//Q. Sum of all odd numbers from 1 to 30 Add only odd numbers. Print final sum.
+let sum1 = 0;
+for(let i = 1; i<31; i++){
+  if(i%2 !== 0){
+    sum1 = sum1+i;
+  }
+}
+console.log(sum1);
+
+//Q. Keep asking until user enters an even number use while loop. stop only if input is even.
+var num =+prompt("number bolo");
+while(num%2 !== 0){
+  num = prompt("number bolo");
+  num = Number(num);
+}
+
+//Q. Print numbers between two user inputs Input start and end using prompt() -> print all between.
+let start = +prompt("Enter first number");
+let end = +prompt("Enter second number");
+
+if(start>end){
+  console.error("start can't be bigger than end")
+}
+
+for(let i=start; i<=end; i++){
+  console.log(i);
+}
+
+//Q. Print only first 3 odd numbers form 1 to 20 use loop. stop with break after 3 odd prints.
+let counter1 = 0;
+for(let i=1; i<21; i++){
+  if(counter1 === 3) break;
+  if(i%2 !== 0){
+    console.log(i);
+    counter1++;
+  }
+}
+
+//Q. Ask user 5 numbers. Count how many are position use loop + condition + counter.
