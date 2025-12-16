@@ -457,7 +457,7 @@ for(let i = 1; i<31; i++){
     sum1 = sum1+i;
   }
 }
-console.log(sum1);
+console.log(`sum of odd numbers: ${sum1}`);
 
 //Q. Keep asking until user enters an even number use while loop. stop only if input is even.
 var num =+prompt("number bolo");
@@ -475,7 +475,7 @@ if(start>end){
 }
 
 for(let i=start; i<=end; i++){
-  console.log(i);
+  console.log(`numbers are:${i}`);
 }
 
 //Q. Print only first 3 odd numbers form 1 to 20 use loop. stop with break after 3 odd prints.
@@ -483,9 +483,50 @@ let counter1 = 0;
 for(let i=1; i<21; i++){
   if(counter1 === 3) break;
   if(i%2 !== 0){
-    console.log(i);
+    console.log(`3 odd numbers: ${i}`);
     counter1++;
   }
 }
 
 //Q. Ask user 5 numbers. Count how many are position use loop + condition + counter.
+let counter2 = 0;
+for(let i=1; i<=5; i++){
+  let number = +prompt("enter number");
+  if(number>=0){
+    counter2++;
+  }
+}
+console.log(`count positieve numbers: ${counter2}`);
+
+
+// Q. ATM Simulator - Allow 3 withdrawals start with 1000 balance. Ask withdrawal amount 3 times. If enough balance -> deduct Else -> Print "Insufficient balance".
+// if else
+  let balance = 1000;
+let amt = +prompt("Enter withdrawal amount");
+ if(amt<= balance){
+  balance -= amt;
+ }
+ else{
+  console.log("Insufficient Balance");
+ }
+
+//  while loop
+
+let balance1 = 1000;
+let attempts1 = 0;
+let flag1 = false;
+
+while(balance1>0 && attempts1 !== 3){
+  let withdraw = +prompt("kitna paisa withdraw karna hai");
+  attempts1++;
+  if(withdraw <= balance1) balance1 -= withdraw;
+  else{
+    flag1 = true;
+    break;
+  }
+}
+
+if(flag1 === true){
+  console.log("Insufficient balance");
+}
+console.log(`Balance : ${balance1}`);
