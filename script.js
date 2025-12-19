@@ -353,9 +353,9 @@ console.log(randomInRange(5, 15));
 
 
 //Q. Count how many numbers between 1 and 15 are greater then 8 Loop and count conditionally.
- let count = 0;
-for(let i = 1; i<15; i++){
-  if(i>8){
+let count = 0;
+for (let i = 1; i < 15; i++) {
+  if (i > 8) {
     count++
   }
 }
@@ -369,22 +369,22 @@ console.log(count);
 // Number
 // + prompt ke aage + lagana
 num = parseInt(num);
-if(num>=0){
-  console.log("positive"); 
+if (num >= 0) {
+  console.log("positive");
 }
 console.log("negative");
 
 // Q. Ask  user for password and print access status Hardcoded correct password. Compare with user input.
 let password = "Sonali";
 
-let pass= prompt("enter password");
+let pass = prompt("enter password");
 
-if(pass===null){
+if (pass === null) {
   console.log("You cancelled it");
-}else{
-  if(pass.trim()===password){
+} else {
+  if (pass.trim() === password) {
     console.log("matched");
-  }else{
+  } else {
     console.log("not matched");
   }
 }
@@ -396,37 +396,37 @@ let attempts = 0;
 let flag = false;
 let correctPassword = "sonali123";
 
-let password1 =prompt("Enter password");
+let password1 = prompt("Enter password");
 attempts++;
 
-if(password1 === correctPassword) flag=true;
+if (password1 === correctPassword) flag = true;
 
-while(password1 != correctPassword){
-  if(attempts === 3){
+while (password1 != correctPassword) {
+  if (attempts === 3) {
     console.error("Acoount Locked");
     break;
   }
-  password1 =prompt("enter password");
-  if(password1 === correctPassword) flag=true;
+  password1 = prompt("enter password");
+  if (password1 === correctPassword) flag = true;
   attempts++;
 }
-if(flag===true) console.log("account opened");
+if (flag === true) console.log("account opened");
 
 // OR
-let attempt= 0;
+let attempt = 0;
 let sahipassword = "sonali";
 
 let userpasword = prompt("enter password");
 attempt++;
 
-while(attempt<3 && sahipassword !== userpasword){
+while (attempt < 3 && sahipassword !== userpasword) {
   userpasword = prompt("enter password");
   attempt++;
 }
 
-if(attempt === 3 && sahipassword !== userpasword){
+if (attempt === 3 && sahipassword !== userpasword) {
   console.error("Account Locked");
-}else{
+} else {
   console.log("Done");
 }
 
@@ -435,33 +435,33 @@ if(attempt === 3 && sahipassword !== userpasword){
 let word = prompt("Enter words");
 let counter = 0;
 
-while(word !== "stop"){
-  if(word === "yes"){
+while (word !== "stop") {
+  if (word === "yes") {
     counter++;
   }
-   word = prompt("enter word");
+  word = prompt("enter word");
 }
-  console.log(`total times yes count : ${counter}`)
+console.log(`total times yes count : ${counter}`)
 
 //Q. Print numbers divisible by 7 form 1 to 50 use modulo % and loop
-for(let i=1; i<51; i++){
-  if(i%7===0){
+for (let i = 1; i < 51; i++) {
+  if (i % 7 === 0) {
     console.log(`numbers: ${i}`)
   }
 }
 
 //Q. Sum of all odd numbers from 1 to 30 Add only odd numbers. Print final sum.
 let sum1 = 0;
-for(let i = 1; i<31; i++){
-  if(i%2 !== 0){
-    sum1 = sum1+i;
+for (let i = 1; i < 31; i++) {
+  if (i % 2 !== 0) {
+    sum1 = sum1 + i;
   }
 }
 console.log(`sum of odd numbers: ${sum1}`);
 
 //Q. Keep asking until user enters an even number use while loop. stop only if input is even.
-var num =+prompt("number bolo");
-while(num%2 !== 0){
+var num = +prompt("number bolo");
+while (num % 2 !== 0) {
   num = prompt("number bolo");
   num = Number(num);
 }
@@ -470,19 +470,19 @@ while(num%2 !== 0){
 let start = +prompt("Enter first number");
 let end = +prompt("Enter second number");
 
-if(start>end){
+if (start > end) {
   console.error("start can't be bigger than end")
 }
 
-for(let i=start; i<=end; i++){
+for (let i = start; i <= end; i++) {
   console.log(`numbers are:${i}`);
 }
 
 //Q. Print only first 3 odd numbers form 1 to 20 use loop. stop with break after 3 odd prints.
 let counter1 = 0;
-for(let i=1; i<21; i++){
-  if(counter1 === 3) break;
-  if(i%2 !== 0){
+for (let i = 1; i < 21; i++) {
+  if (counter1 === 3) break;
+  if (i % 2 !== 0) {
     console.log(`3 odd numbers: ${i}`);
     counter1++;
   }
@@ -490,9 +490,9 @@ for(let i=1; i<21; i++){
 
 //Q. Ask user 5 numbers. Count how many are position use loop + condition + counter.
 let counter2 = 0;
-for(let i=1; i<=5; i++){
+for (let i = 1; i <= 5; i++) {
   let number = +prompt("enter number");
-  if(number>=0){
+  if (number >= 0) {
     counter2++;
   }
 }
@@ -501,14 +501,14 @@ console.log(`count positieve numbers: ${counter2}`);
 
 // Q. ATM Simulator - Allow 3 withdrawals start with 1000 balance. Ask withdrawal amount 3 times. If enough balance -> deduct Else -> Print "Insufficient balance".
 // if else
-  let balance = 1000;
+let balance = 1000;
 let amt = +prompt("Enter withdrawal amount");
- if(amt<= balance){
+if (amt <= balance) {
   balance -= amt;
- }
- else{
+}
+else {
   console.log("Insufficient Balance");
- }
+}
 
 //  while loop
 
@@ -516,17 +516,114 @@ let balance1 = 1000;
 let attempts1 = 0;
 let flag1 = false;
 
-while(balance1>0 && attempts1 !== 3){
+while (balance1 > 0 && attempts1 !== 3) {
   let withdraw = +prompt("kitna paisa withdraw karna hai");
   attempts1++;
-  if(withdraw <= balance1) balance1 -= withdraw;
-  else{
+  if (withdraw <= balance1) balance1 -= withdraw;
+  else {
     flag1 = true;
     break;
   }
 }
 
-if(flag1 === true){
+if (flag1 === true) {
   console.log("Insufficient balance");
 }
 console.log(`Balance : ${balance1}`);
+
+
+// Leap year
+
+let year = +prompt("Enter year to check leap year");
+if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+  console.log(`${year} is a leap year`);
+} else {
+  console.log(`${year} is not a leap year`);
+}
+
+// check the number is divisible by 5 and 11
+let number = +prompt("enter number to check dividibility bby 5 and 11");
+if (number % 5 === 0 && number % 11 === 0) {
+  console.log(`${number} is divisible by 5 and 11`);
+} else {
+  console.log(`${number} is not divisible by 5 and 11`);
+}
+
+// check character is vowel or consonant
+let char = prompt("enter the cahracter");
+if (char.length === 1 && char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z') {
+  char = char.toLowerCase();
+
+  if ("aeiou".includes(char)) {
+    console.log(`${char} is a vowel`);
+  } else {
+    console.log(`${char} is a consonant`);
+  }
+} else {
+  console.log("please enter a valid character");
+}
+
+
+// convert the mark to grade (A/B/C/D/F)
+let marks = +prompt("enter the marks");
+if(marks >= 90 && marks <= 100){
+  console.log("Grade A");
+}
+else if(marks >= 75 && marks < 90){
+  console.log("Grade B")
+}
+else if(marks >= 60 && marks < 75){
+  console.log("Grade C")
+}
+else if(marks >= 40 && marks < 60){
+  console.log("Grade D")
+}
+else if(marks >=0 && marks < 40){
+  console.log("Grade F")
+}
+else{
+  console.log("Invalid marks");
+}
+
+// check temperature: cold/moderate/hot
+let temp = Number(prompt("enter the temprature"));
+switch(true){
+  case temp < 15:
+    console.log("cold");
+    break;
+  case temp >= 15 && temp <= 30:
+    console.log("Moderate");
+    break;
+  case temp > 30:
+    console.log("Hot");
+    break;
+  default:
+    console.log("Invalid temperature")      
+}
+
+// Simple calculator using if-else
+let num1 = +prompt("Enter first number");
+let num2 = +prompt("Enter second number");
+let operator = prompt("Enter opertaor (+, -, *, /)");
+
+if(operator === "+"){
+  console.log(`${num1 + num2}`);
+}
+else if(operator === "-"){
+  console.log(`${num1 - num2}`);
+}
+else if(operator === "*"){
+  console.log(`${num1 * num2}`);
+}
+else if(operator === "/"){
+  if(num2 === 0){
+    console.log("cannot divide by zero");
+  }else{
+    console.log(`${num1 / num2}`);
+  }
+}
+else{
+  console.log("Invalid operator");
+}
+
+// find greatest of 3 numbers
