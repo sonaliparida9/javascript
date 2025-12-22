@@ -352,6 +352,20 @@ console.log(randomInRange(5, 15));
 
 
 
+
+// Q. Ask user's age and check if eligible to vote if age >= 18 ->"Eligible", else -> "Not eligible"
+let userage = prompt("Enter your age");
+if(userage >= 18){
+  console.log("Eligible to vote");
+}else{
+  console.log("Not eligible to vote")
+}
+
+// Q. print multiplication table of 5 use loop to print 5x1 to 5x10
+for(let i=1; i<=10; i++){
+  console.log(`5 x ${i} = ${5*i}`);
+}
+
 //Q. Count how many numbers between 1 and 15 are greater then 8 Loop and count conditionally.
 let count = 0;
 for (let i = 1; i < 15; i++) {
