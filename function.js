@@ -206,3 +206,30 @@ let obj1 = {
 
 let {city} = obj1.user.address;
 console.log(city);
+
+
+// extra 
+
+// Q. function with one parameter
+function greet(name){
+    console.log(`Hello ${name}`);
+}
+greet("sonali");
+
+// Q. function with two parameters
+function add(a,b){
+    console.log(a+b);
+}
+add(2,3);
+
+// Q. function to calculate area of rectangle
+function area(length, width){
+    return length * width;
+}
+console.log(area(5,3));
+
+// Q. function to convert celsius to fahrenheit
+function celsiusToFahrenheit(celsius){
+    return (celsius *9/5) + 100;
+}
+console.log(celsiusToFahrenheit(25));
