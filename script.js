@@ -600,20 +600,20 @@ else{
 }
 
 // check temperature: cold/moderate/hot
-let temp = Number(prompt("enter the temprature"));
-switch(true){
-  case temp < 15:
-    console.log("cold");
-    break;
-  case temp >= 15 && temp <= 30:
-    console.log("Moderate");
-    break;
-  case temp > 30:
-    console.log("Hot");
-    break;
-  default:
-    console.log("Invalid temperature")      
-}
+// let temp = Number(prompt("enter the temprature"));
+// switch(true){
+//   case temp < 15:
+//     console.log("cold");
+//     break;
+//   case temp >= 15 && temp <= 30:
+//     console.log("Moderate");
+//     break;
+//   case temp > 30:
+//     console.log("Hot");
+//     break;
+//   default:
+//     console.log("Invalid temperature")      
+// }
 
 // Simple calculator using if-else
 let num1 = +prompt("Enter first number");
@@ -640,4 +640,8 @@ else{
   console.log("Invalid operator");
 }
 
-// find greatest of 3 numbers
+// find sum of array elements
+function sumofarr(arr){
+  return arr.reduce((acc, curr) => acc + curr, 0);
+}
+console.log(sumofarr([1,2,3,4,5]));
