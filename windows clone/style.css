@@ -1,0 +1,64 @@
+body{
+margin:0;
+font-family:sans-serif;
+}
+
+#desktop{
+height:100vh;
+background:#1e90ff;
+position:relative;
+}
+
+/* Taskbar */
+#taskbar{
+position:fixed;
+bottom:0;
+width:100%;
+height:40px;
+background:black;
+display:flex;
+align-items:center;
+padding-left:10px;
+}
+
+#startBtn{
+font-size:18px;
+cursor:pointer;
+}
+
+/* Start Menu */
+
+#startMenu{
+position:fixed;
+bottom:40px;
+left:10px;
+width:200px;
+background:white;
+display:none;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+padding:10px;
+}
+
+/* Right Click Menu */
+
+#contextMenu{
+position:absolute;
+background:white;
+display:none;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+#contextMenu ul{
+list-style:none;
+padding:10px;
+margin:0;
+}
+
+#contextMenu li{
+padding:5px 10px;
+cursor:pointer;
+}
+
+#contextMenu li:hover{
+background:#eee;
+}
